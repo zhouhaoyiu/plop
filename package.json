@@ -41,6 +41,13 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.53.1"
   },
+  "resolutions": {
+    "glob@npm:^10.2.2": "npm:10.5.0",
+    "istanbul-lib-report@npm:^3.0.0": "npm:3.0.1",
+    "node-gyp@npm:latest": "npm:10.3.1",
+    "semver@npm:^6.0.0": "npm:6.3.1",
+    "tar@npm:^6.1.11": "npm:6.2.1"
+  },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "prettier --write",

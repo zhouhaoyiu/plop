@@ -25,17 +25,16 @@
     "url": "https://github.com/plopjs/plop/issues"
   },
   "scripts": {
-    "test": "npm run test:instrument && npm run vitest && nyc report",
-    "test:instrument": "nyc instrument ./bin ./instrumented/bin && nyc instrument ./src ./instrumented/src && cp package.json ./instrumented",
+    "test": "c8 vitest run",
     "vitest": "vitest run",
     "prepublishOnly": "node ./scripts/prepublishOnly.js",
     "postpublish": "node ./scripts/postpublish.js"
   },
   "devDependencies": {
+    "c8": "^10.1.3",
     "cli-testing-library": "^3.0.1",
-    "inquirer-directory": "^2.2.0",
-    "nyc": "^17.1.0",
-    "plop-pack-fancy-comments": "^0.2.1",
+    "inquirer-directory": "workspace:*",
+    "plop-pack-fancy-comments": "workspace:*",
     "queue-microtask": "^1.2.3",
     "vitest": "^4.0.17"
   },

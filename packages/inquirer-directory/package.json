@@ -1,0 +1,11 @@
+{
+  "name": "inquirer-directory",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.3.8"
+  }
+}

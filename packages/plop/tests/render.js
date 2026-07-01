@@ -13,8 +13,8 @@ export function renderScript(script, args = [], opts = {}) {
   const { cwd = __dirname } = opts;
 
   return render(
-    resolve(__dirname, "../node_modules/.bin/nyc"),
-    ["--silent", "node", script, ...args],
+    process.execPath,
+    [script, ...args],
     {
       cwd,
       spawnOpts: {
@@ -29,11 +29,7 @@ export function renderScript(script, args = [], opts = {}) {
  * @param {Object} opts
  */
 export function renderPlop(args = [], opts = {}) {
-  return renderScript(
-    resolve(__dirname, "../instrumented/bin/plop.js"),
-    args,
-    opts,
-  );
+  return renderScript(resolve(__dirname, "../bin/plop.js"), args, opts);
 }
 
 export * from "cli-testing-library";

@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 import path from "node:path";
-import minimist from "minimist";
-import { Plop, run } from "../../../instrumented/src/plop.js";
+import { parseArgs } from "node:util";
+import { Plop, run } from "../../../src/plop.js";
 
 const args = process.argv.slice(2);
-const argv = minimist(args);
+const { values: argv } = parseArgs({
+  args,
+  options: {
+    completion: { type: "boolean" },
+    cwd: { type: "string" },
+    preload: { type: "string", multiple: true },
+  },
+  strict: false,
+});
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
