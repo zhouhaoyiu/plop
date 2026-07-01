@@ -36,7 +36,7 @@
     "inquirer-directory": "workspace:*",
     "plop-pack-fancy-comments": "workspace:*",
     "queue-microtask": "^1.2.3",
-    "vitest": "^4.0.17"
+    "vitest": "^4.1.0"
   },
   "homepage": "https://plopjs.com",
   "dependencies": {
@@ -49,7 +49,7 @@
     "v8flags": "^4.0.1"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.19.0"
   },
   "preferGlobal": true,
   "bin": "./bin/plop.js"
